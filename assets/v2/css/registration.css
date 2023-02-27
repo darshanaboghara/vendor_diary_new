@@ -1,0 +1,109 @@
+.main_registration {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.main_registration .registration_container {
+	max-width: 880px;
+	width: 100%;
+	height: auto;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 20px;
+	backdrop-filter: blur(4px);
+	overflow: hidden;
+}
+.main_registration .registration_container h1 {
+	font-size: 28px;
+	height: 34px;
+	line-height: 34px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #f2f2f2;
+}
+.main_registration .registration_container .reg_input_wrapper input {
+	width: 100%;
+	font-size: 14px;
+	height: 38px;
+	border-radius: 0px;
+	box-shadow: none !important;
+	outline: none !important;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.main_registration
+.registration_container
+.reg_input_wrapper
+input::placeholder {
+	text-transform: capitalize;
+	font-size: 14px;
+	font-weight: 500;
+}
+.main_registration .registration_container .reg_input_wrapper input:focus,
+.main_registration
+.registration_container
+.reg_input_wrapper
+.select2-container:focus {
+	border: 1px solid #dee2e6;
+}
+.main_registration .registration_container .reg_input_wrapper i {
+	position: absolute;
+	top: 0px;
+	right: 15px;
+	height: 38px;
+	line-height: 30px;
+}
+.main_registration
+.registration_container
+.reg_input_wrapper
+.select2-container,
+.main_registration
+.registration_container
+.reg_input_wrapper
+.select2-container
+span {
+	line-height: 33px;
+	height: 38px;
+	text-align: left;
+	border-radius: 0px;
+}
+
+.main_registration
+.registration_container
+.reg_input_wrapper
+.select2-container
+.select2-selection--single {
+	border: 1px solid #dee2e6;
+}
+
+
+
+
+.main_registration .registration_container .reg_btn {
+	max-width: 150px;
+	width: 100%;
+	font-size: 14px;
+	background-color: #e27162;
+}
+.main_registration .registration_container .link_box {
+	max-width: fit-content;
+	width: 100%;
+	margin: auto;
+	font-size: 14px;
+	font-weight: 500;
+	transition: all 0.4s ease-in;
+	padding: 5px 20px;
+	border-radius: 50px;
+}
+.main_registration .registration_container .link_box:hover {
+	color: #e27162 !important;
+	padding: 5px 20px;
+	border-radius: 50px;
+	background-color: #f2f2f2;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+	rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}

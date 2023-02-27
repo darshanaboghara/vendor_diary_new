@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+User-Agent: *
+Disallow: /assets/vendorimage/
+Disallow: /assets/images/
+Sitemap: https://vendordiary.com/sitemap.xml

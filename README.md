@@ -1,1 +1,1 @@
-"# vendor_diary_new" 
+# vendor_diary

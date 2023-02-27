@@ -1,0 +1,10 @@
+<div class="layout_padding about_section"     style="background-repeat: repeat !important;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="about_taital">About Our Vendor diary</h1>
+        <p class="lorem_text">With hearty greetings, we welcome you to the happy world of vendordiary. We are one of the illustrious websites gloriously visited by millions of people every year. We are respected and honoured by all for our perfect matchmaking, the simplest way of navigation, and creditable services. Our unique and fully dedicated matchmaking services have made us capable to be called as one of the best marriage bureaus for NRI serving throughout Australia and other countries. Avail the great opportunity to browse 100% verified profiles of eligible brides and grooms on the basis of occupation, education, mother tongue, country religion, caste, etc., and choose your ideal better half.The serviceable and confident approach of our NRI matrimonial site professionals has enabled us to earn the love and satisfaction of our clients across the boundaries. We have been blessed to offer our unique matchmaking service to a huge list of clients and the number is rising high. Our site is planned, designed, and created by the industry leaders and our ace experts who have brought an incredible website backed by innovative technology, super attractive look, and extremely user-friendly interface. People from any educational background can easily navigate our matrimonial site for NRIs as you don’t have to be a technical expert to do that.We are available 24 hours throughout the year. With our aim to unite two hearts with optimum happiness, we have used our foresightedness, insight and massive experience to bring unbeatable matchmaking services to you. We continuously bring improved and up-to-the-minute up-gradation to maintain our unmatchable matchmaking service quality that you have never experienced anywhere else. Join us and be a part of the Vako family and win the heart of your extra-special person.</p>
+      </div>
+    </div>
+  </div>
+</div>
