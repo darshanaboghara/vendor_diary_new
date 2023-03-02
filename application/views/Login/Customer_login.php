@@ -43,6 +43,13 @@
   <link href="<?php echo base_url(); ?>/assets/css/owl.theme.defaultddec.css?v=1556886975" type="text/css" rel="stylesheet">
   <!-- Style CSS -->
   <link href="<?php echo base_url(); ?>/assets/css/style75ea.css?v=1558689406" rel="stylesheet">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet">
+
   <script src="<?php echo base_url(); ?>/assets/js/jquery.minec25.js?v=1556886976"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -110,118 +117,122 @@
 <body>
     <div id="overlay"></div>
   
-  <div class="page-header-vendor">
-    <div class="loginform">
-      <div class="vendor-login" id="vendor-login">
-        <div class="vendor-form-title" style="text-align: center;">
-          <!--vendor-title -->
-          <a class="backtohome" href="<?php echo base_url(); ?>"><i class="fa fa-home"></i>
-            <p>Home</p>
-          </a>
-          <div>
-            <img src=" <?php echo base_url().'assets/images/'. $site->upload_logo;?>" style="width: 165px;">
-           
-          </div>
-          <h3 class="mb-2">Welcome
-          </h3>
-          <p>Manage your Event or Ceremony with <span>"<?php echo $site->web_frienly_name;?>"</span>
-          <div id="message" style="color:red;"><?php echo $this->session->flashdata('message_name');?></div>
-          </p>
-        </div>
-        <!--Customer Login-->
-            <form name="login" id="login" action="#">
-                  <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 nopadding">
-                      <!-- Text input-->
-                      <div class="form-group">
-                        <label class="control-label sr-only" for="email">
-                        </label>
-                        <input id="email" type="email" name="email" placeholder="Email" class="form-control" data-valid="required"  tabIndex="1" autofocus autocomplete="off">
-                        <div id="error"></div>
-                      </div>
-                      
-                      <div class="form-group">
-                        <label class="control-label sr-only" for="password">
-                        </label>
-                        <input id="newpassword" type="password" name="password" placeholder="Password" class="form-control" data-valid="required"  tabIndex="1" autofocus autocomplete="off">
-                        <div id="errorpaassword"></div>
-                      </div>
-                      
-                      <div class="form-group">
-                          <div class="g-recaptcha" data-sitekey="<?php echo RECAPTCHA_KEY;?>"></div>
-                          <div id="g-recaptcha-error"></div>
-                        </div>
-                        
-                         
-                    </div>
-                    <!--buttons -->
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 nopadding">
-                      <button type="button" onclick="newlogin();" tabIndex="2" name="loginbutton" name="LOGIN" value="LOGIN" id="loginbutton" class="btn btn-default btn-sm btn-block"> Login</button>
-                      <p class="mt-2">
-                        <a href="javascript:void(0);" onclick="ForgotPassword()" class="wizard-form-small-text"> Forgot your password?
-                        </a>
-                      </p>
-                    </div>
-                    
-                  </div>
-                </form>
-        <!--End Customer Login-->
-        <hr>
-        <!--/.vendor-title -->
-        <!-- <form method="POST" action="Login/sendotp" name="login" id="login"> -->
-        <form name="login2" id="login2" action="#">
-          <div class="row">
-            
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 nopadding">
-                 <!--<a href="#" id="googlelogout" onclick="signOut();" style="display:none">Sign out</a>-->
-               <center> <div id="my-signin2"></div></center>
-            </div>
-            
-          </div>
-        </form>
-        <!-- <form method="POST" action="Login/validateotp" name="otpform" id="otpform" style="display: none;"> -->
-      </div>
-      <div class="vendor-login" id="vendor-reset-password" style="display:none;">
-        <div class="vendor-form-title" style="text-align: center;">
-          <a class="backtohome" href="<?php echo base_url(); ?>"><i class="fa fa-home"></i>
-            <p>Home</p>
-          </a>
-          <!--vendor-title -->
-          <div>
-            <img src="<?php echo base_url(); ?>/assets/images/logo-ico.png">
-          </div>
-          <h3 class="mb-2">Forgot Your Password?
-          </h3>
-          <p>Don't worry, it happens to the best of us.</p>
-        </div>
-        <!--/.vendor-title -->
-        <form name="forgot-password" id="forgot-password">
-          <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 nopadding">
-              <!-- Text input-->
-              <div class="form-group">
-                <label class="control-label sr-only" for="forgot_password">
-                </label>
-                <input id="forgot_password" type="text" name="forgot_password" placeholder="Email Address" class="form-control" data-valid="required" autocomplete="off">
-                <div id="ferror"></div>
+  <div class="page-header-vendor vd-login">
+    <div class="vd-form-outer">
+      <div class="loginform">
+        <div class="vd-form-inner">
+          <div class="vendor-login" id="vendor-login">
+            <div class="vendor-form-title" style="text-align: center;">
+              <!--vendor-title -->
+              <a class="backtohome" href="<?php echo base_url(); ?>"><i class="fa fa-home"></i>
+                <p>Home</p>
+              </a>
+              <div class="vd-logo">
+                <img src=" <?php echo base_url().'assets/images/'. $site->upload_logo;?>">
+              
               </div>
-            </div>
-            <!--buttons -->
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 nopadding">
-                <button type="button" onclick="passwordf();" tabIndex="4" name="loginbutton" name="LOGIN" value="LOGIN" id="loginbutton" class="btn btn-default btn-sm btn-block"> SUBMIT</button>
-              <!--<button type="button" onclick="passwordf();" name="fpassword" id="fpassword" class="btn btn-default btn-sm btn-block" > SUBMIT </button>-->
-              <p class="mt-2">
-                <a href="javascript:void(0);" onclick="BackToLogin();" class="wizard-form-small-text"> Back to Login
-                </a>
+              <h3 class="mb-2 vd-title">Welcome
+              </h3>
+              <p class="vd-subtitle">Manage your Event or Ceremony with <span class="vd-main">"<?php echo $site->web_frienly_name;?>"</span>
+              <div id="message" style="color:red;"><?php echo $this->session->flashdata('message_name');?></div>
               </p>
             </div>
+            <!--Customer Login-->
+                <form name="login" id="login" action="#">
+                      <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 nopadding">
+                          <!-- Text input-->
+                          <div class="form-group">
+                            <label class="control-label sr-only" for="email">
+                            </label>
+                            <input id="email" type="email" name="email" placeholder="Email" class="form-control vd-frminput" data-valid="required"  tabIndex="1" autofocus autocomplete="off">
+                            <div id="error"></div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label class="control-label sr-only" for="password">
+                            </label>
+                            <input id="newpassword" type="password" name="password" placeholder="Password" class="form-control vd-frminput" data-valid="required"  tabIndex="1" autofocus autocomplete="off">
+                            <div id="errorpaassword"></div>
+                          </div>
+                          
+                          <div class="form-group">
+                              <div class="g-recaptcha" data-sitekey="<?php echo RECAPTCHA_KEY;?>"></div>
+                              <div id="g-recaptcha-error"></div>
+                            </div>
+                            
+                            
+                        </div>
+                        <!--buttons -->
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 nopadding">
+                          <button type="button" onclick="newlogin();" tabIndex="2" name="loginbutton" name="LOGIN" value="LOGIN" id="loginbutton" class="btn btn-default btn-sm btn-block vd-frmbtn"> Login</button>
+                          <p class="mt-2">
+                            <a href="javascript:void(0);" onclick="ForgotPassword()" class="wizard-form-small-text vd-text2"> Forgot your password?
+                            </a>
+                          </p>
+                        </div>
+                        
+                      </div>
+                    </form>
+            <!--End Customer Login-->
+            <hr>
+            <!--/.vendor-title -->
+            <!-- <form method="POST" action="Login/sendotp" name="login" id="login"> -->
+            <form name="login2" id="login2" action="#">
+              <div class="row">
+                
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 nopadding">
+                    <!--<a href="#" id="googlelogout" onclick="signOut();" style="display:none">Sign out</a>-->
+                  <center> <div id="my-signin2"></div></center>
+                </div>
+                
+              </div>
+            </form>
+            <!-- <form method="POST" action="Login/validateotp" name="otpform" id="otpform" style="display: none;"> -->
           </div>
-        </form>
-      </div>
-      <div class="vendorsign-div">
-        <p>Connect with Us
-          <a href="<?php echo base_url();?>CustomerRegistration">Signup Now</a>
-        </p>
+          <div class="vendor-login" id="vendor-reset-password" style="display:none;">
+            <div class="vendor-form-title" style="text-align: center;">
+              <a class="backtohome" href="<?php echo base_url(); ?>"><i class="fa fa-home"></i>
+                <p>Home</p>
+              </a>
+              <!--vendor-title -->
+              <div>
+                <img src="<?php echo base_url(); ?>/assets/images/logo-ico.png">
+              </div>
+              <h3 class="mb-2">Forgot Your Password?
+              </h3>
+              <p>Don't worry, it happens to the best of us.</p>
+            </div>
+            <!--/.vendor-title -->
+            <form name="forgot-password" id="forgot-password">
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 nopadding">
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="control-label sr-only" for="forgot_password">
+                    </label>
+                    <input id="forgot_password" type="text" name="forgot_password" placeholder="Email Address" class="form-control" data-valid="required" autocomplete="off">
+                    <div id="ferror"></div>
+                  </div>
+                </div>
+                <!--buttons -->
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 nopadding">
+                    <button type="button" onclick="passwordf();" tabIndex="4" name="loginbutton" name="LOGIN" value="LOGIN" id="loginbutton" class="btn btn-default btn-sm btn-block"> SUBMIT</button>
+                  <!--<button type="button" onclick="passwordf();" name="fpassword" id="fpassword" class="btn btn-default btn-sm btn-block" > SUBMIT </button>-->
+                  <p class="mt-2">
+                    <a href="javascript:void(0);" onclick="BackToLogin();" class="wizard-form-small-text"> Back to Login
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="vendorsign-div">
+            <p>Connect with Us
+              <a href="<?php echo base_url();?>CustomerRegistration" class="vd-btn2"> Signup Now</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

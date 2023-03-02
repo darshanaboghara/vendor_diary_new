@@ -10,7 +10,7 @@
 		<!-- <div id="txtHint"></div> -->
 		<div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 col-md-12 col-sm-12 col-12">
 			<!-- search-block -->
-			<div class="">
+			<div class="vd-search-cms">
 				<div class="text-left search-head">
 					<h1 class="search-head-title">Wedding Made Easy.Hire the Best Wedding Team on Vendordiary.
 					</h1>
@@ -22,38 +22,45 @@
 
 						<div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 col-12">
 							<!-- select -->
-							<select class="wide" name="country_id" id="country_name" onchange="fillstate(this.value);">
-								<option value="0">Country</option>
-								<?php
-								foreach ($country as $data) {
-									echo " <option value=$data->id>$data->country_name</option>";
-								} ?>
-							</select>
+							<div class="vd-select-drop">
+								<select class="wide" name="country_id" id="country_name" onchange="fillstate(this.value);">
+									<option value="0">Country</option>
+									<?php
+									foreach ($country as $data) {
+										echo " <option value=$data->id>$data->country_name</option>";
+									} ?>
+								</select>
+							</div>
 						</div>
 						<div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 col-12">
 							<!-- select -->
-							<select class="wide" name="state_id" id="state" onchange="fillCity(this.value);">
-								<option value="0">State</option>
-							</select>
+							<div class="vd-select-drop">
+								<select class="wide" name="state_id" id="state" onchange="fillCity(this.value);">
+									<option value="0">State</option>
+								</select>
+							</div>
 						</div>
 						<div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 col-12">
 							<!-- select -->
-							<select class="wide" name="city_id" id="city">
-								<option value="0">City</option>
-							</select>
+							<div class="vd-select-drop">
+								<select class="wide" name="city_id" id="city">
+									<option value="0">City</option>
+								</select>
+							</div>
 						</div>
 
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
 							<!-- select -->
-
-							<select class="wide" name="category_id" id="category">
-								<option value="0">Category</option>
-							</select>
+							<div class="vd-select-drop">
+								<select class="wide" name="category_id" id="category">
+									<option value="0">Category</option>
+								</select>
+							</div>
 						</div>
 						<!-- button -->
 						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
 							<input style="background:<?php echo $site->colour_name; ?>; color:<?php echo $site->font_color; ?>;border-color:<?php echo $site->colour_name; ?>;"
-								   class="btn btn-default btn-block" type="submit" name="Search" value="Search">
+								   class="btn btn-default btn-block vd-search-btn" type="submit" name="Search" value="Search">
 						</div>
 					</form>
 					<br>
@@ -62,8 +69,8 @@
 
 				</div>
 				<!-- /.search-form -->
-				<div class="browse-cat">
-					<p class="text-white lead mb-0">Popular Searches
+				<div class="browse-cat vd-popular-search">
+					<p class="text-white lead mb-0 vd-title">Popular Searches
 					</p>
 
 					<a href="<?php echo base_url() . 'GetVendor/vendorbycategory/155/0' ?>">
@@ -454,7 +461,8 @@
 </div>
 
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide vd-home-slider" data-ride="carousel">
+	<div class="bg-overlay"></div>
 	<div class="carousel-inner">
 		<div class="carousel-item active">
 			<img class="lazyload" loading="lazy" src="<?php echo base_url(); ?>assets/homepage/homenew2_1403x674.jpg"
@@ -476,15 +484,14 @@
 </div>
 <!-- /.hero-section -->
 <!-- Home page Vendor category -->
-<div class="space-midsmall bg-white">
+<div class="space-midsmall bg-white vd-category-cms">
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<div class="section-title text-center">
+				<div class="section-title text-center vd-section-title">
 					<!-- section title start-->
-					<h2 class="mb10">Browse Vendors by Category
-					</h2>
-					<p>Choose from over 10000+ vendors across India</p>
+					<h2 class="mb10 vd-title">Browse <span class="vd-main-tag">Vendors</span> by Category</h2>
+					<p class="vd-subtitle">Choose from over 10000+ vendors across India</p>
 				</div>
 				<!-- /.section title start-->
 			</div>
@@ -718,15 +725,14 @@
 
 <!-- /.Home page Vendor category -->
 <!-- How its work -->
-<div class="space-small bg-img">
+<div class="space-small bg-img vd-how-work-cms">
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-12  col-lg-12 col-md-12 col-sm-12 col-12">
-				<div class="section-title">
+				<div class="section-title vd-section-title">
 					<!-- section title start-->
-					<h2 class="mb10">How it works
-					</h2>
-					<p>3 easy steps to make your wedding memorable</p>
+					<h2 class="mb10 vd-title">How it works</h2>
+					<p class="vd-subtitle">3 easy steps to make your wedding memorable</p>
 				</div>
 				<!-- /.section title start-->
 			</div>
@@ -889,15 +895,14 @@
 <!--</script>-->
 <!--Google Ads End-->
 <!-- Home Page Form -->
-<div class="space-medium bg-white">
+<div class="space-medium bg-white vd-inquiry-cms">
 	<div class="container">
 		<div class="row">
 			<div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12 col-12">
-				<div class="section-title text-center">
+				<div class="section-title text-center vd-section-title">
 					<!-- section title start-->
-					<h2 class="mb10">Let's Talk About Your Wedding Plans!
-					</h2>
-					<p>Our Experts can help you choose the best vendors across categories. Please share your details to
+					<h2 class="mb10 vd-title">Let's Talk About Your <span class="vd-main-tag">Wedding Plans!</span></h2>
+					<p class="vd-subtitle">Our Experts can help you choose the best vendors across categories. Please share your details to
 						start the conversation.
 					</p>
 				</div>
@@ -920,27 +925,27 @@
 						<div class="form-group col-md-12">
 							<label class="control-label sr-only" for="full_name">Name
 							</label>
-							<input style="border-radius:20px" id="full_name" name="name" type="text" placeholder="Name"
-								   class="form-control input-md" data-valid="required" required/>
+							<input id="full_name" name="name" type="text" placeholder="Name"
+								   class="form-control input-md vd-frminput" data-valid="required" required/>
 						</div>
 						<div class="form-group col-md-6">
 							<label class="control-label sr-only" for="mobile_number">Mobile
 							</label>
-							<input style="border-radius:20px" id="mobile_number" name="mobile_number" type="tel"
-								   placeholder="Mobile Nummber" class="form-control input-md" maxlength="10"
+							<input id="mobile_number" name="mobile_number" type="tel"
+								   placeholder="Mobile Nummber" class="form-control input-md vd-frminput" maxlength="10"
 								   data-valid="required" required/>
 						</div>
 						<div class="form-group col-md-6">
 							<label class="control-label sr-only" for="email_id">Email Address
 							</label>
-							<input style="border-radius:20px" id="email_id" name="email" type="email"
-								   placeholder="Email Address" class="form-control input-md" data-valid="required"
+							<input id="email_id" name="email" type="email"
+								   placeholder="Email Address" class="form-control input-md vd-frminput" data-valid="required"
 								   required/>
 						</div>
 						<div class="form-group col-md-12">
 							<label class="control-label sr-only" for="comments">Comment
 							</label>
-							<textarea style="border-radius:20px" class="form-control" id="comment" name="desc" rows="2"
+							<textarea class="form-control vd-frmtextarea" id="comment" name="desc" rows="2"
 									  placeholder="Write Comment" maxlength="500" data-valid="required"
 									  required></textarea>
 						</div>
@@ -951,7 +956,7 @@
 						<div class="form-group col-md-12">
 							<button type="submit" id="submit_query"
 									style="background:<?php echo $site->colour_name; ?>; color:<?php echo $site->font_color; ?>;border-color:<?php echo $site->colour_name; ?>;border-radius:20px"
-									class="btn btn-primary btn-block">Send
+									class="btn btn-primary btn-block vd-frmbtn">Send
 							</button>
 						</div>
 					</div>
@@ -1015,12 +1020,12 @@
 <!--</script>-->
 <!--Google Ads End-->
 <!--  are you vendor -->
-<section class="areyou text-center">
+<section class="areyou text-center vd-vender-cms">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-3 nopadding"></div>
 			<div class="col-md-3 nopadding">
-				<div class="arevendor"> <span>
+				<div class="arevendor"> <span class="vd-icon">
 						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
 							 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 viewBox="0 0 80 80" enable-background="new 0 0 80 80"
@@ -1051,16 +1056,16 @@
                <path fill="#E64397" d="M56.1,48.1c1.5-0.7,10.7-4.6,15.9-7l2.1-1l0.8,1.1c-0.9-1.4-1.7-2.4-1.7-2.4l-18.3,4.8l-0.5,7.2
 						C55,49.4,55.6,48.3,56.1,48.1z"></path>
              </svg></span>
-					<h4>Looking for a Venue?</h4>
-					<p> Browse over 10000+ vendors across categories</p>
+					<h4 class="vd-title">Looking for a Venue?</h4>
+					<p class="vd-subtitle"> Browse over 10000+ vendors across categories</p>
 					<a href="<?php echo base_url(); ?>GetVendor"
 					   style="background:<?php echo $site->colour_name; ?>; color:<?php echo $site->font_color; ?>;border-color:<?php echo $site->colour_name; ?>;"
-					   class="btn btn-default btn-sm">Find Vendor
+					   class="btn btn-default vd-btn1">Find Vendor
 					</a>
 				</div>
 			</div>
 			<div class="col-md-3 nopadding">
-				<div class="arevendor"> <span>
+				<div class="arevendor"> <span class="vd-icon">
 						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
 							 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 viewBox="0 0 720 720" enable-background="new 0 0 720 720"
@@ -1085,11 +1090,11 @@
                <path fill="#FFFFFF"
 					 d="M601.5,70.5H112.2c-19.6,0-19.6,29.2,0,29.2h489.4C620.5,99.6,620.5,70.5,601.5,70.5L601.5,70.5z"></path>
              </svg></span>
-					<h4>Are you wedding vender ?</h4>
-					<p>Register now and grow your business</p>
+					<h4 class="vd-title">Are you wedding vender ?</h4>
+					<p class="vd-subtitle">Register now and grow your business</p>
 					<a href="<?php echo base_url(); ?>Registration"
 					   style="background:<?php echo $site->colour_name; ?>; color:<?php echo $site->font_color; ?>;border-color:<?php echo $site->colour_name; ?>;"
-					   class="btn btn-default btn-sm">Add Your Listing
+					   class="btn btn-default vd-btn1">Add Your Listing
 					</a>
 				</div>
 			</div>

@@ -1,10 +1,10 @@
-  <!--  /.are you vendor --><div class="footer">
+  <!--  /.are you vendor --><div class="footer vd-footer">
   <div class="container">
             <div class="row">             
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
                     <div class="footer-widget">
                         <h3 class="widget-title">About Company </h3>
-                        <ul class="listnone">
+                        <ul class="listnone vd-footer-item">
 						<li><a href="<?php echo base_url();?>aboutus">About us</a></li>
 						<li><a href="<?php echo base_url();?>Contactus">Contact us</a></li>
 						<li><a href="<?php echo base_url();?>privacyPolicy">Privacy Policy</a></li>
@@ -22,9 +22,15 @@
                         <h3 class="widget-title">
                             Contact Address
                         </h3>
-                        <!--<p><i class="fa fa-map-marker-alt"></i><?=  @$site->full_address?></p>-->
-                        <a href="tel:<?=@$site->contact_no;?>"><p class="mb0 "><i class="fa fa-phone-volume"></i>  <?=  @$site->contact_no;?></p></a>
-                        <a href="mailto:<?=@$site->contact_email ?>"> <p class="mb0 " ><i class="fa fa-envelope"></i>   <?=  @$site->contact_email?> </p></a>
+                        <ul class="listnone vd-footer-item">
+                            <li>
+                                <a href="tel:<?=@$site->contact_no;?>"><p class="mb0 "><i class="fa fa-phone-volume"></i>  <?=  @$site->contact_no;?></p></a>
+                            </li>
+                            <li>
+                                <a href="mailto:<?=@$site->contact_email ?>"> <p class="mb0 " ><i class="fa fa-envelope"></i>   <?=  @$site->contact_email?> </p></a>
+                            </li>
+                        </ul>
+                        <!--<p><i class="fa fa-map-marker-alt"></i><?=  @$site->full_address?></p>-->                        
                     </div>
                 </div>
                 <!-- /.footer-widget -->
@@ -34,8 +40,8 @@
                         <h3 class="widget-title">
                             List you Business
                         </h3>
-                        <p>Are you vendor ? List your venue and service get more from listing business.</p>
-                        <a href="<?php echo base_url();?>Registration" class="btn btn-default btn-sm" style="background:<?php echo $site->colour_name;?>; color:<?php echo $site->font_color;?>;border-color:<?php echo $site->colour_name;?>;">List your Business</a>
+                        <p class="desc">Are you vendor ? List your venue and service get more from listing business.</p>
+                        <a href="<?php echo base_url();?>Registration" class="btn btn-default vd-btn1" style="background:<?php echo $site->colour_name;?>; color:<?php echo $site->font_color;?>;border-color:<?php echo $site->colour_name;?>;">List your Business</a>
                     </div>
                 </div>
 				<div class="col-xl-3 col-lg-3 col-md-12 col-sm-6 col-12">
@@ -66,7 +72,7 @@
         </div>
     </div>    
 <!-- tiny-footer-section -->
-<div class="tiny-footer">
+<div class="tiny-footer vd-footer-bottom">
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">

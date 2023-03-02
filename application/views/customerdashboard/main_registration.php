@@ -32,6 +32,13 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 	<!-- Theme style -->
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/adminlte.min.css">
+	<!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet">
 
 	<script>
 		function submitUserForm() {
@@ -51,15 +58,15 @@
 </head>
 <body>
 <script src='https://www.google.com/recaptcha/api.js'></script>
-<section class="main_registration"
+<section class="main_registration vd-customer-registration"
 		 style="background-image: url('<?php echo base_url(); ?>assets/v2/images/bg_image.jpg')">
 	<div class="w-100 text-center">
 		<div class="mb-5">
-			<h1 class="text-light">Register a New Membership</h1>
+			<h1 class="text-light vd-title">Register a New Membership</h1>
 		</div>
 		<?php echo validation_errors("<div class='alert alert-danger alert-dismissible'>","</div>"); ?>
-		<div class="registration_container p-3 mx-auto">
-			<a class="backtohome text-white" href="<?php echo base_url(); ?>"><i class="fa fa-home"></i>
+		<div class="registration_container mx-auto">
+			<a class="backtohome" href="<?php echo base_url(); ?>"><i class="fa fa-home"></i>
 				<p>Home</p>
 			</a>
 			<form action="" method="post" onsubmit="return submitUserForm();">
@@ -68,34 +75,34 @@
 					<div class="col-xl-6 col-sm-6">
 						<div class="mb-3 bg-transparent position-relative input_wrapper">
 							<!-- <i class="bi bi-lock outline-0 position-absolute"></i> -->
-							<div class="position-relative reg_input_wrapper mb-4">
-								<i class="bi bi-person-fill outline-0"></i>
-								<input type="text" tabindex="0" class="form-control" name="fname" value="<?php echo set_value('fname'); ?>" placeholder="First Name">
+							<div class="position-relative reg_input_wrapper mb-4 vd-frminputwrap">
+								<i class="bi bi-person-fill outline-0 vd-icon"></i>
+								<input type="text" tabindex="0" class="form-control vd-frminput2" name="fname" value="<?php echo set_value('fname'); ?>" placeholder="First Name">
 							</div>
-							<div class="position-relative reg_input_wrapper mb-4">
-								<i class="bi bi-envelope-fill outline-0"></i>
-								<input type="email" tabindex="2" class="form-control" name="email" value="<?php echo set_value('email'); ?>" placeholder="Email" autocomplate="off">
+							<div class="position-relative reg_input_wrapper mb-4 vd-frminputwrap">
+								<i class="bi bi-envelope-fill outline-0 vd-icon"></i>
+								<input type="email" tabindex="2" class="form-control vd-frminput2" name="email" value="<?php echo set_value('email'); ?>" placeholder="Email" autocomplate="off">
 							</div>
-							<div class="position-relative reg_input_wrapper mb-4">
-								<i class="bi bi-key-fill outline-0"></i>
-								<input type="password" tabindex="4" class="form-control" name="cpassword"  placeholder="Confirm Password">
+							<div class="position-relative reg_input_wrapper mb-4 vd-frminputwrap">
+								<i class="bi bi-key-fill outline-0 vd-icon"></i>
+								<input type="password" tabindex="4" class="form-control vd-frminput2" name="cpassword"  placeholder="Confirm Password">
 							</div>
 						</div>
 					</div>
 					<div class="col-xl-6 col-sm-6">
 						<div class="mb-3 bg-transparent position-relative input_wrapper">
 							<!-- <i class="bi bi-lock outline-0 position-absolute"></i> -->
-							<div class="position-relative reg_input_wrapper mb-4">
-								<i class="bi bi-person-fill outline-0"></i>
-								<input type="text" tabindex="1" class="form-control" name="lname" value="<?php echo set_value('lname'); ?>" placeholder="Last Name">
+							<div class="position-relative reg_input_wrapper mb-4 vd-frminputwrap">
+								<i class="bi bi-person-fill outline-0 vd-icon"></i>
+								<input type="text" tabindex="1" class="form-control vd-frminput2" name="lname" value="<?php echo set_value('lname'); ?>" placeholder="Last Name">
 							</div>
-							<div class="position-relative reg_input_wrapper mb-4">
-								<i class="bi bi-key-fill outline-0"></i>
-								<input type="password" tabindex="3" class="form-control" name="password"  placeholder="Password">
+							<div class="position-relative reg_input_wrapper mb-4 vd-frminputwrap">
+								<i class="bi bi-key-fill outline-0 vd-icon"></i>
+								<input type="password" tabindex="3" class="form-control vd-frminput2" name="password"  placeholder="Password">
 							</div>
-							<div class="position-relative reg_input_wrapper mb-4">
-								<i class="bi bi-telephone-fill outline-0"></i>
-								<input type="text" tabindex="5" class="form-control" name="phone" value="<?php echo set_value('phone'); ?>" placeholder="Mobile Number">
+							<div class="position-relative reg_input_wrapper mb-4 vd-frminputwrap">
+								<i class="bi bi-telephone-fill outline-0 vd-icon"></i>
+								<input type="text" tabindex="5" class="form-control vd-frminput2" name="phone" value="<?php echo set_value('phone'); ?>" placeholder="Mobile Number">
 							</div>
 						</div>
 					</div>

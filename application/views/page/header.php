@@ -147,7 +147,6 @@
     <meta name="referrer" content="origin">
     
     <!--End Menifest-->
-    <link   href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!-- FontAwesome icon -->
     <link   href="<?php echo base_url(); ?>assets/fonts/fontawesome/css/fontawesome-all.css?v=1558689406" rel="stylesheet">
     <!-- Fontello icon -->
@@ -162,6 +161,13 @@
     <!-- OwlCarosuel CSS -->
     <link   href="<?php echo base_url(); ?>assets/css/owl.carouselddec.css?v=1558689406" type="text/css" rel="stylesheet">
     <link   href="<?php echo base_url(); ?>assets/css/owl.theme.defaultddec.css?v=1558689406" type="text/css" rel="stylesheet">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet">
 
  
     <script  src="<?php echo base_url(); ?>assets/js/owl.carousel.minec25.js?v=1558689406"></script>
@@ -294,18 +300,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- header -->
   <div class="header-transparent">
     <!-- top header -->
-    <div class="header-top">
+    <div class="header-top vd-header-top">
       <div class="container-fluid">
         <div class="row">
           <div class="col-xl-6 col-lg-6 col-sm-6 col-md-6 col-sm-6 col-6 d-none d-xl-block d-lg-block d-md-block">
-            <div class="header-text">
-              <p class="wlecome-text">Call : <a href="tel:<?php echo  $site->contact_no;?>"><?php echo  $site->contact_no ?></a> |
+            <div class="header-text vd-header-text">
+              <p class="wlecome-text vd-wlecome-text">Call : <a href="tel:<?php echo  $site->contact_no;?>"><?php echo  $site->contact_no ?></a> |
                 <a href="mailto:<?php echo  $site->contact_email ?>" class="text-white"><?php echo  $site->contact_email ?> </a>
               </p>
             </div>
           </div>
           <div class="col-xl-6 col-lg-6 col-sm-6 col-md-6 col-sm-12 col-12">
-            <div class="header-text text-right">
+            <div class="header-text text-right vd-header-text">
               <?php
               if($this->session->googlelogin==TRUE)
               {
@@ -342,7 +348,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <!-- /.top header -->
     <!-- navigation start -->
-    <div class="container-fluid" style="background-color: #ffffff;">
+    <div class="container-fluid vd-header">
+    <div class="vd-header-inner">          
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <nav class="navbar navbar-expand-lg navbar-transparent">
@@ -358,7 +365,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="icon-bar bottom-bar">
               </span>
             </button>
-            <div class="collapse navbar-collapse" id="navbar-classic">
+            <div class="collapse navbar-collapse vd-topmenu" id="navbar-classic">
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <!--<li class="nav-item">-->
                 <!--  <script async src="https://cse.google.com/cse.js?cx=e6f779a22650a58fd"></script>-->
@@ -754,6 +761,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
+
+    </div>
     <!-- navigation close -->
   </div>
   <br>
@@ -774,7 +783,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 </div>
   <!-- Go To Top-->
-  <button class="scrollToTopBtn"><i class="fas fa-arrow-up"></i>️</button>
+  <button class="scrollToTopBtn"><i class="fas fa-angle-up"></i>️</button>
 
   <!-- page-header -->
   <!--Header End-->
