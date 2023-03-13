@@ -9,7 +9,7 @@
     <?php 
     if(isset($vdata[0]))
     {?>
-        <title><?echo $vdata[0]->business_name?> in <?php echo $this->OH->getcatnamebyid($vdata[0]->category_id);?>-<?php echo $site->website_title;?></title>
+        <title><?php echo $vdata[0]->business_name;?> in <?php echo $this->OH->getcatnamebyid($vdata[0]->category_id);?>-<?php echo $site->website_title;?></title>
         <meta name="description" content="<?php echo $site->website_description;?>-<?echo $vdata[0]->description?>" />
         <meta name="keyword" content="<?php echo $site->website_keywords;?>,vendordiary,<?echo $vdata[0]->business_name?>,<?echo $vdata[0]->description?>">
     <?php
@@ -303,14 +303,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="header-top vd-header-top">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xl-6 col-lg-6 col-sm-6 col-md-6 col-sm-6 col-6 d-none d-xl-block d-lg-block d-md-block">
+          <div class="col-xl-6 col-lg-6 col-sm-6 col-md-12 col-sm-6 col-6 d-none d-xl-block d-lg-block d-md-block">
             <div class="header-text vd-header-text">
               <p class="wlecome-text vd-wlecome-text">Call : <a href="tel:<?php echo  $site->contact_no;?>"><?php echo  $site->contact_no ?></a> |
                 <a href="mailto:<?php echo  $site->contact_email ?>" class="text-white"><?php echo  $site->contact_email ?> </a>
               </p>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-6 col-sm-6 col-md-6 col-sm-12 col-12">
+          <div class="col-xl-6 col-lg-6 col-sm-6 col-md-12 col-sm-12 col-12">
             <div class="header-text text-right vd-header-text">
               <?php
               if($this->session->googlelogin==TRUE)
@@ -765,10 +765,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <!-- navigation close -->
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
   
 
   
