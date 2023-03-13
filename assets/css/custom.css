@@ -987,6 +987,13 @@ a:hover {
     height: calc(100% + 13px);
 }
 
+.vd-search-two {
+    padding-top: 117px;
+}
+.vd-search-two .page-caption {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 @media(max-width: 1199px) {
     .vd-search-cms .search-form {
