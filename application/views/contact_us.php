@@ -117,7 +117,7 @@
 						<div class="mt-4">
 							<button
 									type="submit" name="contactus" id="contactus"
-									class="btn btn-primary shadow-none text-capitalize border-0 d-block p-0"
+									class="btn btn-primary vd-frmbtn"
 									onclick="ContactUS.QueryForm(event);"
 							>
 								submit

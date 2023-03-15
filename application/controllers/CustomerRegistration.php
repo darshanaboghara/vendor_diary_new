@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class CustomerRegistration extends CI_Controller {
 	public function index()
 	{
+		$data['site']=$this->OH->getsitedata();
 		$this->form_validation->set_rules('fname', 'First Name', 'required');
 		$this->form_validation->set_rules('lname', 'Last Name', 'required');
 		$this->form_validation->set_rules('phone', 'Mobile Number', 'required');
@@ -14,7 +15,7 @@ class CustomerRegistration extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
         {
 //            $this->load->view('customerdashboard/registration');
-            $this->load->view('customerdashboard/main_registration');
+            $this->load->view('customerdashboard/main_registration', $data);
         }
         else
         {

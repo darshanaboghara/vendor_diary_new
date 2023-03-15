@@ -89,7 +89,10 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <div class="register-box">
     <div class="register-logo">
-      <a><b class="vd-title">Register a new Vendor</b></a>
+      <!-- <a><b class="vd-title">Register a new Vendor</b></a> -->
+      <div class="vd-logo">
+        <img src=" <?php echo base_url() . 'assets/images/' . $site->upload_logo; ?>">
+      </div>
     </div>
 
     <div class="card">

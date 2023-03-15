@@ -535,10 +535,12 @@ a:hover {
 
 .vd-login .vendorsign-div .vd-btn2 {
     background: transparent;
-    padding: 0;
+    padding: 0 !important;
     font-weight: 400;
     text-decoration: underline;
-    color: var(--color3);
+    color: var(--color3) !important;
+    display: inline-block;
+    height: unset;
 }
 
 .vd-login .vd-frminput {
@@ -730,6 +732,7 @@ a:hover {
 }
 
 .vd-register-one {
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -990,10 +993,53 @@ a:hover {
 .vd-search-two {
     padding-top: 117px;
 }
+
 .vd-search-two .page-caption {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+.vd-pagination ul.pagination li a {
+    padding: 8px 15px;
+    border: 1px solid #e6e5e7;
+    border-radius: 2px;
+    background-color: #fff;
+    height: 40px;
+    min-width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.vd-pagination ul.pagination li.active a,
+.vd-pagination ul.pagination li:hover a {
+    border-color: var(--color3);
+    background-color: var(--color3);
+    color: #FFFFFF;
+}
+
+.vd-pagination ul.pagination li.active a {
+    color: #FFFFFF;
+}
+
+.vd-pagination ul.pagination li {
+    padding: 0;
+    margin: 0 8px 0 0 !important;
+    border: none;
+    background-color: transparent;
+}
+
+.vd-register-one .vd-logo img {
+    padding: 0 !important;
+    width: 165px;
+}
+
+.vd-customer-registration .vd-logo img {
+    width: 165px;
+    margin-top: -30px;
+    margin-bottom: 15px;
+}
+
 
 @media(max-width: 1199px) {
     .vd-search-cms .search-form {
@@ -1104,18 +1150,22 @@ a:hover {
     .vd-search-two .vd-search-btn {
         padding: 5px;
     }
+
     .vd-home-slider-main .vd-slider-wrap {
         position: relative;
     }
+
     .vd-popular-search {
         padding-left: 15px;
         padding-right: 15px;
     }
+
     .vd-popular-search .vd-title {
-        color: var(--color2)!important;
-        text-shadow: none!important;
+        color: var(--color2) !important;
+        text-shadow: none !important;
         text-align: center;
     }
+
     .vd-popular-search {
         padding: 15px;
     }

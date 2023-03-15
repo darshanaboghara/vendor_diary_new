@@ -635,7 +635,7 @@
 			};
 			var base = "<?php echo base_url(); ?>";
 			//alert(window.location.origin);
-			xhttp.open("GET", window.location.origin + "/GetVendor/vendorbycategoryfilter?cid=" + v, true);
+			xhttp.open("GET", base + "/GetVendor/vendorbycategoryfilter?cid=" + v, true);
 			//  xhttp.open("GET", base+"GetVendor/vendorbycategoryfilter?cid="+v, true);
 			xhttp.send();
 		}
