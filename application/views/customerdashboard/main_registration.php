@@ -98,24 +98,24 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-12 d-flex justify-content-center">
+						<div class="col-xl-6 mb-3">
 							<div class="g-recaptcha" data-sitekey="<?php echo RECAPTCHA_KEY; ?>"></div>
 							<div id="g-recaptcha-error"></div>
 						</div>
 						<div class="col-xl-12">
 							<div class="d-flex align-items-center justify-content-between">
-								<div class="form-check checkbox_wrapper">
-									<label for="agreeTerms" class="checkbox_container text-light">
-										<input type="checkbox" class="form-check-input checkbox_input" id="agreeTerms" name="terms" value="agree">
-										I agree to the <a href="#"><span class="text-dark fw-bold">terms</span></a>
+								<div class="icheck-primary">
+									<input type="checkbox" class="form-check-input checkbox_input" id="agreeTerms" name="terms" value="agree">
+									<label for="agreeTerms" class="dc-agreeTerms">
+										I agree to the <a href="#">terms</a>
 									</label>
 								</div>
-								<button type="submit" class="btn btn-primary shadow-none border-0 text-capitalize reg_btn">
+								<button type="submit" class="btn btn-primary vd-frmbtn">
 									Register
 								</button>
 							</div>
-							<div class="w-100 text-center">
-								<a href="<?php echo base_url(); ?>Customerlogin" class="text-decoration-none text-capitalize text-light d-flex align-items-center justify-content-center link_box">
+							<div class="dc-link2-wrap">
+								<a href="<?php echo base_url(); ?>Customerlogin" class="dc-link2">
 									<i class="bi bi-arrow-left ouline-0 me-2"></i>
 									I already have a membership
 								</a>

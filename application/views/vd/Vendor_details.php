@@ -43,7 +43,7 @@ if ($vdata == null) {
 	<link   href="<?php echo base_url(); ?>assets/css/style75ea.css?v=1558689406" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet">
 
-	<div class="vendor-content-wrapper fadeIn vd-vendor-detail-page" style="padding-top: 10px;" id="object">
+	<div class="fadeIn vd-vendor-detail-page" id="object">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12">

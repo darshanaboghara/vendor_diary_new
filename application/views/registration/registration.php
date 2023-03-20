@@ -28,6 +28,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <!--select2 end-->
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -235,7 +236,12 @@
         <!--     data-ad-slot="5983426633"-->
         <!--     data-ad-format="auto"-->
         <!--     data-full-width-responsive="true"></ins>-->
-        <a href="<?php echo base_url(); ?>login" class="text-center dc-link2">I already have a membership</a>
+        <div class="dc-link2-wrap">
+          <a href="<?php echo base_url(); ?>login" class="dc-link2">
+            <i class="bi bi-arrow-left ouline-0 me-2"></i>
+            I already have a membership
+          </a>
+        </div>
       </div>
       <!-- /.form-box -->
     </div><!-- /.card -->
