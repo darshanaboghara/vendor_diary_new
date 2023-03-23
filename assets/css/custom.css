@@ -77,6 +77,19 @@ h6 {
     text-decoration: none !important;
 }
 
+.vd-header-text {
+    display: flex;
+    align-items: center;
+}
+
+.vd-header-text.left {
+    justify-content: flex-start;
+}
+
+.vd-header-text.right {
+    justify-content: flex-end;
+}
+
 .vd-topmenu .mega-dropdown-menu {
     top: 45px;
 }
@@ -1097,8 +1110,9 @@ a:hover {
     padding-top: 117px;
 }
 
-.vd-plan-page .vd-plans-detail {
+.vd-main-inner {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .vd-plan-page .vd-plans-detail .card-title {
@@ -1196,6 +1210,10 @@ a:hover {
     background-color: var(--color2);
 }
 
+.vd-site-logo {
+    width: 130px;
+}
+
 @media(max-width: 1199px) {
     .vd-search-cms .search-form {
         padding: 30px;
@@ -1246,10 +1264,35 @@ a:hover {
     .vd-popular-search {
         margin-top: 10px;
     }
+
+    .vd-header-text.left,
+    .vd-header-text.right {
+        justify-content: center;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .vd-section-title .vd-title {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .vd-home-slider-main {
+        padding-top: 145px;
+    }
+
+    .vd-search-two {
+        padding-top: 145px;
+    }
+
 }
 
 @media(max-width: 900px) {
-    .vd-search-cms .gsc-control-cse {
+
+    .vd-search-cms .gsc-control-cse,
+    .vd-search-two .gsc-control-cse {
         padding: 0;
         border: none;
         background-color: transparent;
@@ -1261,34 +1304,47 @@ a:hover {
         display: block;
     }
 
-    .vd-search-cms .select2-container--default .select2-selection--single .select2-selection__rendered {
+    .vd-search-cms .select2-container--default .select2-selection--single .select2-selection__rendered,
+    .vd-search-two .select2-container--default .select2-selection--single .select2-selection__rendered {
         line-height: 38px !important;
         font-size: 14px;
     }
 
-    .vd-search-cms .select2-container .select2-selection--single {
+    .select2-container--default .select2-results__options .select2-results__option {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .vd-search-cms .select2-container .select2-selection--single,
+    .vd-search-two .select2-container .select2-selection--single {
         height: 38px !important;
     }
 
-    .vd-search-cms .select2-container--default .select2-selection--single .select2-selection__arrow {
+    .vd-search-cms .select2-container--default .select2-selection--single .select2-selection__arrow,
+    .vd-search-two .select2-container--default .select2-selection--single .select2-selection__arrow {
         height: auto;
         top: 50%;
         transform: translateY(-50%);
     }
 
-    .vd-search-cms .gsc-control-cse {
+    .vd-search-cms .gsc-control-cse,
+    .vd-search-two .gsc-control-cse {
         padding: 0;
         border: none;
         background-color: transparent;
     }
 
-    .vd-home-slider-main {
-        padding-top: 0;
-    }
-
     .vd-search-cms .search-head {
         margin-bottom: 10px;
         padding: 0;
+    }
+
+    img.vd-site-logo {
+        width: 130px;
+    }
+
+    .header-transparent {
+        position: fixed;
     }
 }
 
@@ -1329,15 +1385,141 @@ a:hover {
     .vd-search-cms .search-head-title {
         font-size: 20px;
     }
+
     .vd-home-slider.slide {
         top: 0;
     }
 }
-@media(max-width: 575px) {
+
+@media(max-width: 575.5px) {
     .vd-search-cms .search-head-title {
         font-size: 14px;
     }
+
+    .vd-search-cms .search-form form div:nth-child(n+4),
+    .vd-search-two form div:nth-child(n+4) {
+        margin-top: 5px;
+    }
+
+    .vd-section-title .vd-title {
+        font-size: 22px;
+        line-height: 22px;
+    }
 }
+
+@media(max-width: 480.5px) {
+    .vd-header-text {
+        line-height: 20px;
+        font-size: 10px;
+    }
+
+    .vd-header-top {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    img.vd-site-logo {
+        width: 100px;
+        margin: 0 !important;
+    }
+
+    .search-head-title {
+        padding-top: 0px !important;
+    }
+
+    .vd-search-cms .select2-container--default .select2-selection--single .select2-selection__rendered,
+    .vd-search-two .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 24px !important;
+        font-size: 10px;
+        border-radius: 6px;
+    }
+
+    .vd-search-cms .select2-container .select2-selection--single,
+    .vd-search-two .select2-container .select2-selection--single {
+        height: 24px !important;
+    }
+
+    .vd-search-cms .select2-container .select2-selection--single,
+    .vd-search-two .select2-container .select2-selection--single {
+        height: 24px !important;
+    }
+
+    .vd-search-cms .search-form .vd-search-btn,
+    .vd-search-two .vd-search-btn {
+        font-size: 10px;
+        padding: 0;
+        height: 24px;
+        line-height: 24px;
+        border-radius: 6px !important;
+    }
+
+    .gsc-input-box {
+        padding: 0 !important;
+        border-radius: 6px 0 0 6px !important;
+    }
+
+    .vd-search-cms .gsc-search-box .gsc-search-button,
+    .vd-search-two .gsc-search-box .gsc-search-button {
+        border-radius: 0 6px 6px 0 !important;
+        width: 38px;
+        padding: 0;
+    }
+
+    .vd-search-cms .gsc-search-box .gsc-input,
+    .vd-search-two .gsc-search-box .gsc-input {
+        font-size: 10px;
+    }
+
+    .vd-search-cms .gsc-search-box .gsc-search-button svg,
+    .vd-search-two .gsc-search-box .gsc-search-button svg {
+        width: 12px;
+    }
+
+    .vd-home-slider-main .banner-box {
+        max-width: 100% !important;
+    }
+
+    .vd-search-cms .search-form {
+        padding: 10px;
+    }
+
+    .vd-search-cms .search-head-title {
+        font-size: 10px;
+    }
+
+    .vd-search-cms .gsc-search-box .gsib_a,
+    .vd-search-two .gsc-search-box .gsib_a {
+        padding: 0 5px;
+    }
+
+    .vd-search-cms .gsc-search-box .gsst_a .gscb_a,
+    .vd-search-two .gsc-search-box .gsst_a .gscb_a {
+        line-height: 20px !important;
+        vertical-align: middle;
+    }
+
+    .vd-home-slider-main {
+        padding-top: 130px;
+    }
+
+    .vd-search-two form.form-row {
+        margin: 0;
+    }
+
+    .vd-select-drop .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        top: 50% !important;
+    }
+
+    .vd-search-two {
+        padding-top: 130px;
+    }
+
+    .select2-container--default .select2-results__options .select2-results__option {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
 @media(max-width: 375px) {
     .vd-login .loginform {
         transform: scale(0.85);

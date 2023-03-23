@@ -12,7 +12,7 @@
 								<div class="vd-top-section">
 									<form method="POST" action="<?php echo base_url(); ?>GetVendor/locationchange" class="form-row list-search">
 										<!-- location -->
-										<div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-3">
+										<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
 											<div class="vd-select-drop">
 												<select class="wide" name="country_id" id="country_name" onchange="fillstate(this.value);">
 													<option value="0">Country</option>
@@ -29,7 +29,7 @@
 										</div>
 										<!-- /.location -->
 										<!-- location -->
-										<div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-3">
+										<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
 											<div class="vd-select-drop">
 												<select class="wide" name="state_id" id="state" onchange="fillCity(this.value);">
 													<option value="0">State</option>
@@ -38,7 +38,7 @@
 										</div>
 										<!-- /.location -->
 										<!-- location -->
-										<div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-3">
+										<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
 											<div class="vd-select-drop">
 												<select class="wide" name="city_id" id="city">
 													<option value="0">City</option>
@@ -55,7 +55,7 @@
 										</div>
 										<!-- /.location -->
 										<!-- services -->
-										<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+										<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-8">
 											<div class="vd-select-drop">
 												<select class="wide" name="category_id" id="category">
 													<option value="0">Looking For
@@ -71,7 +71,7 @@
 											</div>
 										</div>
 										<!-- /.services-->
-										<div class="col-xl-2 col-lg-3 col-md-3 col-sm-12 col-3">
+										<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
 											<input class="btn btn-default btn-block vd-search-btn" type="submit" name="Search" value="Search" style="background:<?php echo $site->colour_name; ?>; color:<?php echo $site->font_color; ?>;border-color:<?php echo $site->colour_name; ?>;">
 										</div>
 									</form>

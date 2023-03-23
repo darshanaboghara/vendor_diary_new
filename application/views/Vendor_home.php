@@ -51,7 +51,7 @@
 											</div>
 										</div>
 
-										<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6">
+										<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-8">
 											<!-- select -->
 											<div class="vd-select-drop">
 												<select class="wide" name="category_id" id="category">
@@ -60,7 +60,7 @@
 											</div>
 										</div>
 										<!-- button -->
-										<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6">
+										<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
 											<input style="background:<?php echo $site->colour_name; ?>; color:<?php echo $site->font_color; ?>;border-color:<?php echo $site->colour_name; ?>;" class="btn btn-default btn-block vd-search-btn" type="submit" name="Search" value="Search">
 										</div>
 									</form>
@@ -421,14 +421,14 @@
 										responsiveClass: true,
 										responsive: {
 											320: {
-												items: 2,
+												items: 3,
 												nav: false
 											},
-											420: {
+											375: {
 												items: 4,
 												nav: false
 											},
-											576: {
+											500: {
 												items: 5,
 												nav: false
 											},
@@ -1172,10 +1172,6 @@
 			top: -112px;
 			position: relative;
 		}
-
-		.space-midsmall {
-			padding-top: 100px;
-		}
 	}
 
 	/*for mobile vertical*/
@@ -1187,10 +1183,5 @@
 		.banner-box {
 			top: 38% !important;
 		}
-
-		.space-midsmall {
-			padding-top: 190px;
-		}
-
 	}
 </style>

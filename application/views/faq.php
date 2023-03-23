@@ -10,16 +10,13 @@
      <div class="page-header2 vd-breadcrumb">
          <div class="container">
              <div class="row">
-                 <!-- page caption -->
                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                      <div class="page-caption2">
-                         <h1 class="page-title">Privacy Policy</h1>
+                         <h1 class="page-title">FAQ</h1>
                      </div>
                  </div>
-                 <!-- /.page caption -->
              </div>
          </div>
-         <!-- page caption -->
      </div>
      <!-- /.page-header -->
      <!-- contact-form -->

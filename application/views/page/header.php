@@ -303,15 +303,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="header-top vd-header-top">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xl-6 col-lg-6 col-sm-6 col-md-12 col-sm-6 col-6 d-none d-xl-block d-lg-block d-md-block">
-            <div class="header-text vd-header-text">
+          <div class="col-xl-6 col-lg-6 col-sm-6 col-md-12 col-sm-12 col-12">
+            <div class="header-text vd-header-text left">
               <p class="wlecome-text vd-wlecome-text">Call : <a href="tel:<?php echo  $site->contact_no;?>"><?php echo  $site->contact_no ?></a> |
                 <a href="mailto:<?php echo  $site->contact_email ?>" class="text-white"><?php echo  $site->contact_email ?> </a>
               </p>
             </div>
           </div>
           <div class="col-xl-6 col-lg-6 col-sm-6 col-md-12 col-sm-12 col-12">
-            <div class="header-text text-right vd-header-text">
+            <div class="header-text vd-header-text right">
               <?php
               if($this->session->googlelogin==TRUE)
               {
@@ -328,9 +328,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     echo '<p>Go to <a href="' . base_url() . 'Dashboard" class="text-white"> Dashboard</a>';
                     echo '&nbsp <a href="' . base_url() . 'Dashboard/logout" >Logout</a></p>';
                   } else {
-                    echo '<p>Are You Vendor? <a href="' . base_url() . 'Login" class="text-white" style="padding-right: 15px;"> Signin / Signup</a>
-                           Are You Coutomer? <a href="' . base_url() . 'Customerlogin/" class="text-white"> Signin / Signup</a>
-                           </p>';
+                    echo '<div>Are You Vendor? <a href="' . base_url() . 'Login" class="text-white" style="padding-right: 15px;"> Signin / Signup</a></div>
+                    <div>Are You Coutomer? <a href="' . base_url() . 'Customerlogin/" class="text-white"> Signin / Signup</a>
+                           </div>';
                   }
               }
               
@@ -354,7 +354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
           <nav class="navbar navbar-expand-lg navbar-transparent">
             <a class="navbar-brand" href="<?php echo base_url() ?>">
-              <img class="lazyload" loading="lazy" src="<?php echo  base_url(); ?>assets/images/<?php echo $site->upload_logo;?>" alt="Site Logo" style='height: 68px;'>
+              <img class="lazyload vd-site-logo" loading="lazy" src="<?php echo  base_url(); ?>assets/images/<?php echo $site->upload_logo;?>" alt="Site Logo">
               <!--<p style="color: black;"> <?php echo  $site->web_frienly_name; ?></p>-->
             </a>
             <button type="button" class="navbar-toggle collapsed navbar-left" id="sidebarCollapse1">
@@ -807,24 +807,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
 /*for mobile vertical*/
 @media (max-width: 479px) {
-	.search-head-title
-	{
-	    padding-top: 140px !important;
-	}
-	.slide 
-	{
-        top: -17px !important;
-	}
-	.space-midsmall 
-	{
-        padding-top: 330px !important;
-    }
-    .header-top
-    {
-        visibility: hidden !important;
-        height: 0px !important;
-        min-height: 0px !important;
-    }
     body{
         padding: 0px 0px 0px !important;
     }

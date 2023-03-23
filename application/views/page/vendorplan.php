@@ -477,118 +477,119 @@
   $vplan = $query->result();
   ?>
   <div class="vd-main vd-plan-page">
-    <div class="container-fluid justify-content-center vd-plans-detail">
-      <div class="row">
-        <div class="col text-center px-5">
-          <h5 font-weight-light class>Find over 1000000+ Customer for your service needs at vendordiary.com – 100% trusted and real Customer.</h5>
+    <div class="vd-main-inner">
+      <div class="container-fluid justify-content-center vd-plans-detail">
+        <div class="row">
+          <div class="col text-center px-5">
+            <h5 font-weight-light class>Find over 1000000+ Customer for your service needs at vendordiary.com – 100% trusted and real Customer.</h5>
+          </div>
+        </div>
+        <div class="row d-flex vd-plan-outer">
+          <?php foreach ($vplan as $data) { ?>
+
+            <div class="col-lg-3  text-center">
+              <div class="card rounded">
+                <div class="card-body border-0">
+                  <h1 class="card-title"><?= @$data->rates_name; ?></h1>
+                  <hr>
+                  <h2 class="card-text b">$<?php echo $data->plan_amount; ?></h2>
+                  <a href="<?= base_url(); ?>Dashboard/showVendorPlan" class="btn w-100 vd-btn1">Buy now</a>
+                </div>
+              </div>
+            </div>
+          <?php } ?>
         </div>
       </div>
-      <div class="row d-flex vd-plan-outer">
-        <?php foreach ($vplan as $data) { ?>
-
-          <div class="col-lg-3  text-center">
-            <div class="card rounded">
-              <div class="card-body border-0">
-                <h1 class="card-title"><?= @$data->rates_name; ?></h1>
-                <hr>
-                <h2 class="card-text b">$<?php echo $data->plan_amount; ?></h2>
-                <a href="<?= base_url(); ?>Dashboard/showVendorPlan" class="btn w-100 vd-btn1">Buy now</a>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8898782763527089" crossorigin="anonymous"></script>
+      <!-- Home page -->
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8898782763527089" data-ad-slot="5983426633" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      <div id="generic_price_table" class="vd-plan-pricing-box">
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <!--PRICE HEADING START-->
+                <div class="price-heading clearfix">
+                  <h1 class="vd-title">Vendor Plan Pricing</h1>
+                </div>
+                <!--//PRICE HEADING END-->
               </div>
             </div>
           </div>
-        <?php } ?>
-      </div>
-    </div>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8898782763527089" crossorigin="anonymous"></script>
-    <!-- Home page -->
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8898782763527089" data-ad-slot="5983426633" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    <div id="generic_price_table" class="vd-plan-pricing-box">
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <!--PRICE HEADING START-->
-              <div class="price-heading clearfix">
-                <h1 class="vd-title">Vendor Plan Pricing</h1>
-              </div>
-              <!--//PRICE HEADING END-->
-            </div>
-          </div>
-        </div>
-        <div class="container">
+          <div class="container">
 
-          <!--BLOCK ROW START-->
-          <div class="row">
+            <!--BLOCK ROW START-->
+            <div class="row">
 
-            <?php
+              <?php
 
 
-            foreach ($vplan as $key => $data) {
-            ?>
-              <div class="col-md-3">
+              foreach ($vplan as $key => $data) {
+              ?>
+                <div class="col-md-3">
 
-                <!--PRICE CONTENT START-->
-                <div class="generic_content clearfix">
+                  <!--PRICE CONTENT START-->
+                  <div class="generic_content clearfix">
 
-                  <!--HEAD PRICE DETAIL START-->
-                  <div class="generic_head_price clearfix">
+                    <!--HEAD PRICE DETAIL START-->
+                    <div class="generic_head_price clearfix">
 
-                    <!--HEAD CONTENT START-->
-                    <div class="generic_head_content clearfix">
+                      <!--HEAD CONTENT START-->
+                      <div class="generic_head_content clearfix">
 
-                      <!--HEAD START-->
-                      <div class="head_bg"></div>
-                      <div class="head">
-                        <span><?php echo $data->rates_name; ?></span>
+                        <!--HEAD START-->
+                        <div class="head_bg"></div>
+                        <div class="head">
+                          <span><?php echo $data->rates_name; ?></span>
+                        </div>
+                        <!--//HEAD END-->
+
                       </div>
-                      <!--//HEAD END-->
+                      <!--//HEAD CONTENT END-->
 
-                    </div>
-                    <!--//HEAD CONTENT END-->
-
-                    <!--PRICE START-->
-                    <div class="generic_price_tag clearfix">
-                      <span class="price">
-                        <span class="sign">
-                          <?php
-                          if ($data->plan_amount_type == "INR") {
-                            echo "₹";
-                          } else if ($data->plan_amount_type == "AUD") {
-                            echo "$";
-                          } else {
-                            echo "$";
-                          }
-                          ?>
+                      <!--PRICE START-->
+                      <div class="generic_price_tag clearfix">
+                        <span class="price">
+                          <span class="sign">
+                            <?php
+                            if ($data->plan_amount_type == "INR") {
+                              echo "₹";
+                            } else if ($data->plan_amount_type == "AUD") {
+                              echo "$";
+                            } else {
+                              echo "$";
+                            }
+                            ?>
 
 
+                          </span>
+                          <span class="currency"><?php echo $data->plan_amount; ?></span>
+                          <span class="month">/YEAR</span>
                         </span>
-                        <span class="currency"><?php echo $data->plan_amount; ?></span>
-                        <span class="month">/YEAR</span>
-                      </span>
+                      </div>
+                      <!--//PRICE END-->
+
                     </div>
-                    <!--//PRICE END-->
+                    <!--//HEAD PRICE DETAIL END-->
 
-                  </div>
-                  <!--//HEAD PRICE DETAIL END-->
-
-                  <!--FEATURE LIST START-->
-                  <div class="generic_feature_list">
-                    <ul>
-                      <!--<li><i class="fas fa-user-friends"></i><span><?php echo $data->lead; ?></span> Lead</li>-->
-                      <!--<li><span><?php echo $data->plan_duration; ?></span> Day</li>-->
-                      <!--<li><span><?php echo $data->top_featured_in_pages; ?></span> Page</li>-->
-                      <!--     <?php if ($data->plan_amount <= 0) { ?>
+                    <!--FEATURE LIST START-->
+                    <div class="generic_feature_list">
+                      <ul>
+                        <!--<li><i class="fas fa-user-friends"></i><span><?php echo $data->lead; ?></span> Lead</li>-->
+                        <!--<li><span><?php echo $data->plan_duration; ?></span> Day</li>-->
+                        <!--<li><span><?php echo $data->top_featured_in_pages; ?></span> Page</li>-->
+                        <!--     <?php if ($data->plan_amount <= 0) { ?>
                                            <li><span>Limited</span> </li>
                                         <?php } else { ?>
                                        <li><span>24x7 </span> Support</li>
                                     <li><span>Boost your Listing </span> </li>
                                     <li><span>Verified Badge </span> </li>
                                       <?php } ?>-->
-                      <?php
-                      /*  foreach($data as $key=>$value )
+                        <?php
+                        /*  foreach($data as $key=>$value )
                                     {
                                         if($key!="id" && $key!="status" && $key!="is_deleted" && $key!="created_on" && $key!="rates_name")
                                         {
@@ -596,46 +597,47 @@
                                             echo '<li><span>'. str_replace("_"," ",$key).':<b>'.$value.'</b></span></li>';
                                         }
                                     }*/
-                      foreach (explode('@', $data->plan_details) as $value) {
-                        echo '<li><span>' . $value . '</span></li>';
-                      }
-                      ?>
-                    </ul>
-                  </div>
-                  <!--//FEATURE LIST END-->
+                        foreach (explode('@', $data->plan_details) as $value) {
+                          echo '<li><span>' . $value . '</span></li>';
+                        }
+                        ?>
+                      </ul>
+                    </div>
+                    <!--//FEATURE LIST END-->
 
-                  <!--BUTTON START-->
-                  <div class="generic_price_btn clearfix" style="cursor: pointer;">
-                    <?php if ($data->plan_amount <= 0) { ?>
-                      <a id="checkout-button">Free</a>
-                    <?php } else { ?>
-                      <a id="checkout-button" href="<?= base_url(); ?>Dashboard/showVendorPlan">Buy</a>
-                    <?php } ?>
+                    <!--BUTTON START-->
+                    <div class="generic_price_btn clearfix" style="cursor: pointer;">
+                      <?php if ($data->plan_amount <= 0) { ?>
+                        <a id="checkout-button">Free</a>
+                      <?php } else { ?>
+                        <a id="checkout-button" href="<?= base_url(); ?>Dashboard/showVendorPlan">Buy</a>
+                      <?php } ?>
+                    </div>
+                    <!--//BUTTON END-->
+
                   </div>
-                  <!--//BUTTON END-->
+                  <!--//PRICE CONTENT END-->
 
                 </div>
-                <!--//PRICE CONTENT END-->
+              <?php } ?>
+            </div>
+            <!--//BLOCK ROW END-->
 
-              </div>
-            <?php } ?>
           </div>
-          <!--//BLOCK ROW END-->
-
-        </div>
-      </section>
-      <!--<footer>-->
-      <!--    <a class="bottom_btn" href="#">&copy; MrSahar</a>-->
-      <!--  </footer>-->
-    </div>
-
-    <div class="container  justify-content-center mt-2">
-      <div class="row ">
-        <div class="col text-center mb-5">
-          <h5 class="font-weight-light px-5">For any queries, reach out to us at <a href="mailto:<?= @$site->contact_email ?>"><?= @$site->contact_email ?></a>, available from <br>Mon-Fri,9:30 AM to 6:30 PM.</h4>
-        </div>
+        </section>
+        <!--<footer>-->
+        <!--    <a class="bottom_btn" href="#">&copy; MrSahar</a>-->
+        <!--  </footer>-->
       </div>
 
+      <div class="container  justify-content-center mt-2">
+        <div class="row ">
+          <div class="col text-center mb-5">
+            <h5 class="font-weight-light px-5">For any queries, reach out to us at <a href="mailto:<?= @$site->contact_email ?>"><?= @$site->contact_email ?></a>, available from <br>Mon-Fri,9:30 AM to 6:30 PM.</h4>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </body>
