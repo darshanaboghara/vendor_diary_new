@@ -1147,8 +1147,8 @@ a:hover {
 .vd-faq-cms .vd-faq .vd-title {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 24px;
     color: var(--color2);
 }
 
@@ -1212,6 +1212,17 @@ a:hover {
 
 .vd-site-logo {
     width: 130px;
+}
+
+.vd-title3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-shadow: none;
+    margin-bottom: 20px;
+    display: block;
+    color: var(--color2);
 }
 
 @media(max-width: 1199px) {

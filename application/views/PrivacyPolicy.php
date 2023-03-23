@@ -36,7 +36,7 @@
 			<div class="row justify-content-center">
 				<div class="col-xl-10">
 					<div class="privacy_card">
-						<label class="d-block mb-4"> Privacy policy </label>
+						<label class="vd-title3"> Privacy policy </label>
 
 						<h3>1. WHAT DO WE DO WITH YOUR INFORMATION?</h3>
 						<p class="text-wrap">

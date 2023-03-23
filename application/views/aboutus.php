@@ -32,7 +32,7 @@
 			<div class="row justify-content-center">
 				<div class="col-xl-10">
 					<div class="privacy_card">
-						<label class="d-block mb-4"> About US </label>
+						<label class="vd-title3"> About US </label>
 						<p class="text-wrap">
 							Vendor Diary is an online platform by Vako Platforms Pvt. Ltd., Australia for facilitation to
 							customers worldwide. It provides opportunities to vendors to list their products/services along
